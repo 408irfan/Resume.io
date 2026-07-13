@@ -14,10 +14,18 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <!-- Animated background layers -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
   <!-- Theme toggle -->
   <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
     <span class="theme-icon">🌙</span>
@@ -26,12 +34,16 @@
   <!-- Header / Hero -->
   <header class="hero">
     <div class="container hero-inner">
-      <img class="avatar" src="assets/img/profile.jpg" alt="Mohd Abdul Irfan" />
-      <h1 class="name">Mohd Abdul Irfan</h1>
-      <p class="title">Software Engineer</p>
-      <p class="tagline">Cloud architecture · backend APIs · enterprise integrations — 5+ years building scalable systems.</p>
+      <div class="avatar-wrap" data-reveal>
+        <img class="avatar" src="assets/img/profile.jpg" alt="Mohd Abdul Irfan" />
+        <span class="status-dot" title="Available for work"></span>
+      </div>
+      <p class="hello" data-reveal>&gt; hello_world.init()</p>
+      <h1 class="name" data-reveal>Mohd Abdul Irfan</h1>
+      <p class="title" data-reveal><span class="type-prefix">&lt;/&gt;</span> <span id="typed"></span><span class="caret">▋</span></p>
+      <p class="tagline" data-reveal>Cloud architecture · backend APIs · enterprise integrations — 5+ years building scalable systems.</p>
 
-      <ul class="contact-list">
+      <ul class="contact-list" data-reveal>
         <li><a href="mailto:irfanmohdabdul1@gmail.com">✉️ irfanmohdabdul1@gmail.com</a></li>
         <li><a href="tel:+919398924525">📞 +91 93989 24525</a></li>
         <li><a href="https://github.com/mohdabdulirfan" target="_blank" rel="noopener">🐙 GitHub</a></li>
@@ -39,11 +51,12 @@
         <li><span>📍 Secunderabad, Telangana, India</span></li>
       </ul>
 
-      <div class="hero-actions">
+      <div class="hero-actions" data-reveal>
         <a class="btn btn-primary" href="assets/resume.pdf" target="_blank" rel="noopener">⬇ Download Resume (PDF)</a>
         <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
     </div>
+    <a class="scroll-cue" href="#about" aria-label="Scroll down"><span></span></a>
   </header>
 
   <main class="container content">
